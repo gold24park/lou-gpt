@@ -1,6 +1,6 @@
 A simple cli demo program based on OpenAI GPT-3.5 Turbo API
 
-![screenshot](./screenshots/screenshot1.png)
+![screenshot](./screenshots/screenshot1.PNG)
 
 ## Getting started (Windows)
 Download `dist/gpt.exe` file
