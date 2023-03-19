@@ -2,17 +2,24 @@ A simple cli demo program based on OpenAI GPT-3.5 Turbo API
 
 ![screenshot](./screenshots/screenshot1.PNG)
 
-## Getting started (Windows)
-Download `dist/gpt.exe` file
+## Getting started
+## Mac OS
+Download `dist/gpt` file.
 
-Open terminal, go to the path you downloaded. 
+Open terminal, go to the path you downloaded.
 
-Run `gpt.exe` with an argument: OpenAI API Key.
+Run `gpt` with an argument: OpenAI API Key.
+```commandline
+./gpt <YOUR_OPENAI_API_KEY>
+```
+
+## Windows
+Download `dist/gpt.exe` file.
 ```commandline
 ./gpt.exe <YOUR_OPENAI_API_KEY>
 ```
 
-## Getting started with Python
+## Python project
 
 #### Setup Environment
 Copy & paste your OpenAI API Key on `.env`
