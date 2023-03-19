@@ -9,11 +9,11 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-model = os.getenv("MODEL")
+model = "gpt-3.5-turbo"
 commands = ['/clear', '/token', '/quit', '/help']
 
 
-def func_timeout(func, args=(), kwargs={}, timeout=5):
+def func_timeout(func, args=(), kwargs={}, timeout=20):
     class FuncThread(threading.Thread):
         def __init__(self):
             threading.Thread.__init__(self)
@@ -89,7 +89,6 @@ if __name__ == '__main__':
         os.system("pause")
         exit(-1)
 
-    max_timeout = int(os.getenv("MAX_TIMEOUT"))
     print(f'Model: {model}, Enter "/help" for help')
     messages = []
     while True:
@@ -98,7 +97,7 @@ if __name__ == '__main__':
             if msg.split(' ')[0] in commands:
                 prompt_command(messages=messages, msg=msg)
             else:
-                response = func_timeout(prompt_gpt, args=(messages, msg), timeout=max_timeout)
+                response = func_timeout(prompt_gpt, args=(messages, msg))
                 gpt_msg = response.choices[0].message["content"].strip()
                 print(f'>>> GPT: ({datetime.now()})')
                 print(gpt_msg)

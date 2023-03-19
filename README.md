@@ -25,8 +25,6 @@ Download `dist/gpt.exe` file.
 Copy & paste your OpenAI API Key on `.env`
 ```commandline
 OPENAI_API_KEY="sk-***************************************"
-MAX_TIMEOUT=20
-MODEL="gpt-3.5-turbo"
 ```
 
 #### Install dependencies
@@ -42,3 +40,9 @@ python main.py
 
 ## How to get an OpenAI API KEY
 https://platform.openai.com/account/api-keys
+
+
+## Tips
+```commandline
+alias gpt3='/path/your/project/dist/gpt sk-**********************'
+```
